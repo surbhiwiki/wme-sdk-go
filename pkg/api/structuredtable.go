@@ -1,7 +1,6 @@
 package api
 
-// StructuredTable represents a structured table with headers, rows, and footers,
-// including a confidence score
+// StructuredTable represents a structured table .
 type StructuredTable struct {
 	// Identifier is a unique string that identifies the structured table.
 	Identifier string `json:"identifier,omitempty"`
@@ -17,7 +16,7 @@ type StructuredTable struct {
 
 	// ConfidenceScore indicates the confidence (between 0.0 and 1.0)
 	// associated with this structured table extraction.
-	// A higher score suggests structural and well formed table.
+	// A higher score suggests a structural and a well formed table.
 	ConfidenceScore *float64 `json:"confidence_score,omitempty"`
 }
 

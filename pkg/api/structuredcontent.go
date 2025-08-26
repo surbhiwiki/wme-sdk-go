@@ -105,7 +105,7 @@ type Part struct {
 	// Citations are the citations included inside the part.
 	Citations []*StructuredCitation `json:"citations,omitempty" avro:"citations"`
 
-	//TableReferences are the links tables with identifiers and confidence score inside the pary
+	// TableReferences are the tables inside the part.
 	TableReferences []*StructuredTableRef `json:"table_references,omitempty" avro:"table_references"`
 }
 
@@ -122,13 +122,12 @@ type Link struct {
 }
 
 // StructuredTableRef represents a reference to a structured table,
-// including its unique identifier and an optional confidence score.
 type StructuredTableRef struct {
 	// Identifier is a unique string that identifies the structured table.
 	Identifier string `json:"identifier,omitempty" avro:"identifier"`
 
 	// ConfidenceScore indicates the confidence (between 0.0 and 1.0)
 	// associated with this table reference. A higher score suggests
-	// a structured and well formed table
+	// a structured and well formed table.
 	ConfidenceScore *float64 `json:"confidence_score,omitempty" avro:"confidence_score"`
 }
